@@ -1,0 +1,29 @@
+.course-content-drawer-open-button {
+  position: fixed;
+  right: 0;
+  top: 20%;
+  background-color: #555555;
+  width: 12.25rem;
+  height: 3rem;
+  padding-inline: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  transform: translateX(76%);
+  transition: transform 0.3s ease-in;
+  span {
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.2s 0.3s ease-in;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  &:hover {
+    transform: translateX(0);
+    span {
+      opacity: 1;
+    }
+  }
+}

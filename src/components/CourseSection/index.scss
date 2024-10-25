@@ -1,0 +1,54 @@
+.section-header {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-inline-start: 1rem;
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--gray-44);
+    line-height: 1.5rem;
+  }
+  svg {
+    width: 2rem;
+  }
+}
+.section-info {
+  width: 100%;
+  display: block;
+  font-size: 0.8rem;
+  color: var(--gray-44);
+  margin-top: 2px;
+  padding-left: 3.2rem;
+}
+.MuiAccordionSummary-content {
+  flex-wrap: wrap;
+  margin: 0 !important;
+}
+.MuiAccordionDetails-root {
+  padding: 0 !important;
+}
+.section-lectures-container {
+  padding-inline-start: 4rem;
+}
+.section-lecture-icons {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  background: linear-gradient(#d9d9d9, #d9d9d9) no-repeat center/1px 100%;
+
+  svg {
+    position: relative;
+    display: block;
+    z-index: 0;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: white;
+  }
+}

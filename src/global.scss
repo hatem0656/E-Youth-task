@@ -1,0 +1,84 @@
+:root {
+  --main-color: #114680;
+  --gray-44: #444444;
+
+  font-size: 16px;
+}
+@media (max-width: 1280px) {
+  :root {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 11px;
+  }
+}
+
+body * {
+  margin: 0;
+  font-family: "Jost", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  padding-inline: 10%;
+  margin: auto;
+  position: relative;
+  @media screen and (max-width: 1200px) {
+    padding-inline: 5%;
+  }
+}
+
+input,
+textarea {
+  border: none;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  font-size: inherit;
+  color: inherit;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
