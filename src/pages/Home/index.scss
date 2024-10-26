@@ -1,0 +1,16 @@
+.go-to-course-btn {
+  display: block;
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--gray-ea);
+  box-shadow: var(--shadow);
+  color: #000;
+  font-size: 1rem;
+  border-radius: 7px;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  font-weight: 400;
+}
