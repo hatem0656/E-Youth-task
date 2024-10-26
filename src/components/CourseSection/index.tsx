@@ -1,12 +1,14 @@
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
-import Typography from "@mui/material/Typography";
 import { getCourseData } from "../../helpers/getCourseData";
 import { Lecture } from "../../types";
 import ArrowUpwardIcon from "../svgs/ArrowUpwardIcon";
+import CheckedIcon from "../svgs/CheckedIcon";
 import PlayIcon from "../svgs/PlayIcon";
 import "./index.scss";
+import { Link } from "react-router-dom";
+import { lecturePageRoute } from "../../constants";
 
 export default function CourseSection() {
   const course = getCourseData();
@@ -32,7 +34,7 @@ export default function CourseSection() {
                 "linear-gradient(180deg, rgba(187, 150, 150, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%)",
               paddingBlock: "1rem",
               paddingInlineStart: "0.5rem",
-              paddingInlineEnd: "1.8rem",
+              paddingInlineEnd: "1.9rem",
             },
           }}
         >
@@ -55,13 +57,26 @@ export default function CourseSection() {
           </AccordionSummary>
           <AccordionDetails>
             <div className="section-lectures-container">
-              <div className="section-lecture-icons">
-                {section.lectures.map((lecture) => (
-                  <>
-                    <PlayIcon />
-                  </>
-                ))}
-              </div>
+              {section.lectures.map((lecture) => (
+                <Link
+                  to={`${lecturePageRoute}${lecture.id}`}
+                  className="section-lecture-wrapper"
+                  key={lecture.name}
+                >
+                  <PlayIcon />
+                  <h2
+                    className={`section-lecture-name ${lecture.isFinished ? "section-lecture-na me--finished" : ""}`}
+                  >
+                    {lecture.name}
+                  </h2>
+
+                  {lecture.isFinished && <CheckedIcon />}
+                  {!lecture.isFinished && <span className="not-checked"></span>}
+                  <span className="section-lecture-duration">
+                    {lecture.duration}min
+                  </span>
+                </Link>
+              ))}
             </div>
           </AccordionDetails>
         </Accordion>

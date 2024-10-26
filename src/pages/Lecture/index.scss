@@ -1,0 +1,42 @@
+.video-container {
+  width: 100%;
+  background: #eee;
+  position: relative;
+}
+
+.plyr__video-wrapper {
+  height: 30rem !important;
+  aspect-ratio: initial !important;
+}
+
+.video-container .navigate-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3.5rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bcbec0;
+
+  &--next {
+    right: 0;
+  }
+  &--prev {
+    left: 0;
+  }
+  &--disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: white;
+  }
+}

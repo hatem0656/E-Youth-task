@@ -1,0 +1,49 @@
+.comments-container {
+  margin-top: 1.25rem;
+}
+
+.comment {
+  display: flex;
+  gap: 1rem;
+  padding-block: 1.125rem;
+
+  border-top: 1px solid var(--gray-ea);
+  .user-image {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+.comment-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .date,
+  p {
+    display: block;
+    font-family: var(--jost);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--gray-44);
+  }
+  p {
+    width: 100%;
+    line-height: 1.6rem;
+  }
+  .reply {
+    display: flex;
+    gap: 0.9rem;
+    font-family: var(--jost);
+    font-weight: 400;
+    color: #000;
+    font-size: 0.9rem;
+    align-items: center;
+  }
+}

@@ -1,0 +1,30 @@
+.reviews-tab-panel {
+  padding-bottom: 3rem;
+}
+.reviews-tab-panel-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #000;
+}
+.reviews-tab-panel-rating-container {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  .rating {
+    display: block;
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+  .stars {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .rating-number {
+    margin-top: 5px;
+    font-family: var(--jost);
+    color: var(--gray-55);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+}

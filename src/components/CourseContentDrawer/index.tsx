@@ -1,16 +1,31 @@
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import { Key, useState } from "react";
-import "./index.scss";
-import ArrowLeft from "../svgs/ArrowLeft";
-import { Backdrop } from "@mui/material";
+import { useEffect } from "react";
+import { useCourseLayoutContext } from "../../providers/CourseLayoutProvider";
 import CourseContent from "../CourseContent";
+import ArrowLeft from "../svgs/ArrowLeft";
+import "./index.scss";
 
 type Props = {};
 
 const CourseContentDrawer = (props: Props) => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const openDrawer = () => setIsDrawerOpen(true);
-  const closeDrawer = () => setIsDrawerOpen(false);
+  const { isDrawerOpen, setIsDrawerOpen } = useCourseLayoutContext();
+
+  const openDrawer = () => {
+    setIsDrawerOpen(true);
+    localStorage.setItem("isDrawerOpen", "true");
+  };
+  const closeDrawer = () => {
+    setIsDrawerOpen(false);
+    localStorage.setItem("isDrawerOpen", "false");
+  };
+  useEffect(() => {
+    let storedValue = localStorage.getItem("isDrawerOpen");
+    if (!storedValue) {
+      localStorage.setItem("isDrawerOpen", "false");
+    } else {
+      setIsDrawerOpen(storedValue === "true");
+    }
+  }, []);
   return (
     <>
       <button
@@ -21,6 +36,7 @@ const CourseContentDrawer = (props: Props) => {
         <span>Course Content</span>
       </button>
       <SwipeableDrawer
+        id="course-content-drawer"
         anchor={"right"}
         open={isDrawerOpen}
         onClose={() => {}}

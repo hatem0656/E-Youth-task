@@ -1,0 +1,29 @@
+.faqs-tab-panel {
+  padding-bottom: 3rem;
+}
+.faqs-tab-panel .MuiAccordion-root {
+  width: 100%;
+  background-color: white;
+  padding-inline: 1.75rem;
+  padding-block: 1.25rem;
+  box-shadow: var(--shadow);
+}
+.faqs-tab-panel .MuiAccordionSummary-root {
+  padding: 0;
+  margin: 0;
+  min-height: fit-content !important;
+}
+.faqs-tab-panel .MuiAccordionSummary-content {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.faqs-tab-panel .MuiAccordionDetails-root {
+  width: 97%;
+  margin-top: 1rem;
+  font-family: var(--jost);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7rem;
+  color: var(--gray-55);
+}

@@ -1,0 +1,31 @@
+.tabs-navigator-container {
+  .MuiTabs-root {
+    background-color: white;
+  }
+  .MuiTab-root {
+    padding-inline: 2.5rem;
+    padding-block: 1.25rem;
+    border-right: 1px solid var(--gray-ea);
+    color: #000;
+    font-weight: 500;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    @media (max-width: 768px) {
+      padding-inline: 2rem;
+    }
+  }
+  .MuiTabs-indicator {
+    display: none;
+  }
+  .Mui-selected {
+    font-weight: 500;
+    color: var(--gray-55) !important;
+    background-color: var(--white-f5);
+  }
+}
+
+.tabs-navigator-container .tab-panel {
+  padding-inline: 2.5rem;
+  padding-top: 1.5rem;
+  background-color: var(--white-f5);
+}

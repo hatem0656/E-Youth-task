@@ -1,0 +1,9 @@
+.main-container {
+  width: 100%;
+
+  &--shrink {
+    @media (min-width: 769px) {
+      width: calc(100vw - 30rem);
+    }
+  }
+}

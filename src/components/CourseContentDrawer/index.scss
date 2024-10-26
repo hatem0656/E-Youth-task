@@ -20,10 +20,19 @@
     color: #fff;
   }
 
+  @media (max-width: 992px) {
+    top: 70%;
+  }
+
   &:hover {
-    transform: translateX(0);
-    span {
-      opacity: 1;
+    @media (min-width: 769px) {
+      transform: translateX(0);
+      span {
+        opacity: 1;
+      }
     }
   }
+}
+.MuiDrawer-root {
+  width: 0;
 }

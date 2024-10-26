@@ -1,0 +1,10 @@
+.notes-tab-panel {
+  padding-bottom: 8rem;
+
+  & > h2 {
+    font-size: 1rem;
+    color: var(--gray-44);
+    font-weight: 700;
+    margin-block: 1rem;
+  }
+}

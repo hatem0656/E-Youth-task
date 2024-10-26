@@ -1,8 +1,9 @@
 export type Lecture = {
+  id: string;
   name: string;
   isFinished: boolean;
   duration: number;
-  videoSrc?: string;
+  videoId: string;
 };
 
 export type Section = {

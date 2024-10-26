@@ -1,13 +1,13 @@
-import React from "react";
 import CourseContentDrawer from "../components/CourseContentDrawer";
+import { CourseLayoutProvider } from "../providers/CourseLayoutProvider";
+import LayoutColumn from "./LayoutColumn";
 
-type Props = {};
-
-const CourseLayout = (props: Props) => {
+const CourseLayout = () => {
   return (
-    <>
+    <CourseLayoutProvider>
+      <LayoutColumn />
       <CourseContentDrawer />
-    </>
+    </CourseLayoutProvider>
   );
 };
 
