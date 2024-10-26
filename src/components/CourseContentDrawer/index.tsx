@@ -39,8 +39,8 @@ const CourseContentDrawer = (props: Props) => {
         id="course-content-drawer"
         anchor={"right"}
         open={isDrawerOpen}
-        onClose={() => {}}
-        onOpen={() => {}}
+        onClose={() => closeDrawer()}
+        onOpen={() => openDrawer()}
         classes={{ paper: "course-content-drawer" }}
         sx={{
           "& .MuiDrawer-paper": {
